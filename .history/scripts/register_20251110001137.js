@@ -1,7 +1,4 @@
-import {
-  onAuthStateChanged,
-  createUserWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+import { onAuthStateChanged, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 import { auth } from "./firebaseConfig.js";
 import {
   collection,
@@ -49,7 +46,7 @@ profile.addEventListener(
 let userId;
 let userInfo;
 form.addEventListener("submit", async (event) => {
-  registerBtn.innerHTML = "loading..";
+    registerBtn.innerHTML = 'loading..'
   event.preventDefault();
   createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => {
@@ -67,18 +64,17 @@ form.addEventListener("submit", async (event) => {
       };
       console.log(userInfo);
 
-      ///Sending userInformations to Databasee
+    ///Sending userInformations to Databasee 
       try {
         const docRef = addDoc(collection(db, "yourfeedusers"), userInfo);
       } catch (e) {
-        registerBtn.innerHTML = "Register";
         console.error("Error adding document: ", e);
       }
 
-      window.location = "login.html";
+        window.location = "login.html";
     })
     .catch((error) => {
-      registerBtn.innerHTML = "Register";
+    registerBtn.innerHTML = 'Register'
 
       const errorMessage = error.message;
       console.error(errorMessage);

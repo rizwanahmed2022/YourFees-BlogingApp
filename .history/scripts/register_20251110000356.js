@@ -1,7 +1,4 @@
-import {
-  onAuthStateChanged,
-  createUserWithEmailAndPassword,
-} from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 import { auth } from "./firebaseConfig.js";
 import {
   collection,
@@ -14,7 +11,6 @@ const lastName = document.querySelector("#last-name");
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const form = document.querySelector("#form");
-const registerBtn = document.querySelector("#register");
 //
 //
 //
@@ -49,7 +45,6 @@ profile.addEventListener(
 let userId;
 let userInfo;
 form.addEventListener("submit", async (event) => {
-  registerBtn.innerHTML = "loading..";
   event.preventDefault();
   createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((userCredential) => {
@@ -67,19 +62,18 @@ form.addEventListener("submit", async (event) => {
       };
       console.log(userInfo);
 
-      ///Sending userInformations to Databasee
+    ///Sending 
       try {
-        const docRef = addDoc(collection(db, "yourfeedusers"), userInfo);
+        const docRef = addDoc(collection(db, "ads"), userInfo);
+        console.log("Document written with ID: ", docRef.id);
+        alert("ad published");
       } catch (e) {
-        registerBtn.innerHTML = "Register";
         console.error("Error adding document: ", e);
       }
 
-      window.location = "login.html";
+      //   window.location = "login.html";
     })
     .catch((error) => {
-      registerBtn.innerHTML = "Register";
-
       const errorMessage = error.message;
       console.error(errorMessage);
     });
