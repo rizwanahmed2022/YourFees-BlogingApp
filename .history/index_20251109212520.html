@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | YourFeed</title>
+  <link rel="stylesheet" href="styles/home.css">n
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">YourFeed</div>
+
+  <div class="user-section">
+    <div class="user-info">
+      <img src="#" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="auth-buttons">
+      <button id="dark-mode-toggle" class="btn">🌙</button>
+    </div>
+  </div>
+</header>
+
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Share Your Voice with the World</h1>
+      <p>YourFeed is where ideas come to life — read, write, and connect with people who inspire you.</p>
+      <div class="hero-buttons">
+        <a id="startwritin" href="post.html" class="startwritin btn primary">Start Writing</a>
+        <a href="#" class="btn secondary">Explore Blogs</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Blogging Illustration">
+    </div>
+  </section>
+
+  <!-- Main Layout: Sidebar + Feed -->
+  <main class="main-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Active Writers</h3>
+      <ul class="user-list">
+        <li><img src="https://randomuser.me/api/portraits/men/11.jpg" alt="John Doe"><span>John Doe</span></li>
+        <li><img src="https://randomuser.me/api/portraits/women/17.jpg" alt="Sarah Lee"><span>Sarah Lee</span></li>
+        <li><img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Michael Chen"><span>Michael Chen</span></li>
+        <li><img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Emily Stone"><span>Emily Stone</span></li>
+      </ul>
+
+   
+    </aside>
+
+    <!-- Feed Section -->
+    <section class="feed-section">
+      <h2 class="section-title">Latest Blogs</h2>
+      <p class="section-subtitle">Discover blogs from creators across YourFeed</p
+      <div class="feed">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+          <div class="blog-header">
+            <img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Alice" class="user-avatar">
+            <div class="blog-info">
+              <div class="blog-title">Understanding React Hooks</div>
+              <div class="blog-meta">by Alice Johnson • 2 hours ago</div>
+            </div>
+          </div>
+          <p class="blog-desc">
+            Dive into React Hooks and learn how to manage state and side effects efficiently in functional components.
+          </p>
+          <button class="see-all-btn">Read More</button>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+          <div class="blog-header">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Brian" class="user-avatar">
+            <div class="blog-info">
+              <div class="blog-title">10 Tips for Better UX Design</div>
+              <div class="blog-meta">by Brian Smith • 5 hours ago</div>
+            </div>
+          </div>
+          <p class="blog-desc">
+            Enhance your user experience with these essential design tips for web and mobile applications.
+          </p>
+          <button class="see-all-btn">Read More</button>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+          <div class="blog-header">
+            <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="Carla" class="user-avatar">
+            <div class="blog-info">
+              <div class="blog-title">Getting Started with AI</div>
+              <div class="blog-meta">by Carla Nguyen • 1 day ago</div>
+            </div>
+          </div>
+          <p class="blog-desc">
+            A beginner's guide to AI, machine learning, and integrating intelligent systems into your applications.
+          </p>
+          <button class="see-all-btn">Read More</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Dark Mode & Auth JS -->
+  <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      if(document.body.classList.contains('dark-mode')){
+        darkModeToggle.textContent = '☀️ Light Mode';
+      } else {
+        darkModeToggle.textContent = '🌙 Dark Mode';
+      }
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+:root {
+  --color-primary: #1e90ff;
+  --color-bg: #000000;        /* page background */
+  --color-card-bg: #121212;   /* card background */
+  --color-text: #f0f0f0;
+  --color-input-bg: #1c1c1c;
+  --color-shadow: rgba(0, 0, 0, 0.7);
+  --color-primary-hover: #0066cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 1rem;
+}
+
+.login-card {
+  background-color: var(--color-card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--color-shadow);
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.login-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #ccc;
+}
+
+.login-form input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.login-form input::placeholder {
+  color: #888;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
+.btn.sign-in {
+  margin-top: 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn.sign-in:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+  text-align: right;
+  margin-top: 0.5rem;
+}
+
+.forgot-password a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.signup-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.signup-text a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   Responsive for mobile
+====================== */
+@media (max-width: 500px) {
+  body {
+    padding: 1rem;
+  }
+
+  .login-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
+  }
+
+  .login-subtitle {
+    font-size: 0.9rem;
+  }
+}

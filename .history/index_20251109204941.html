@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourFeeds</title>
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">YourFeeds</a>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li class="auth-only"><a href="#">Create Post</a></li>
+      </ul>
+
+      <div class="nav-user">
+        <!-- When not logged in -->
+        <div class="nav-auth">
+          <a href="#" class="btn-login">Login</a>
+          <a href="#" class="btn-signup">Sign Up</a>
+        </div>
+
+        <!-- When logged in (toggle visibility with JS) -->
+        <div class="nav-profile" style="display: none;">
+          <img src="https://via.placeholder.com/35" alt="User Avatar" class="avatar">
+          <div class="dropdown">
+            <a href="#">Profile</a>
+            <a href="#">My Blogs</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</body>
+</html>

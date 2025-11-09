@@ -1,0 +1,171 @@
+:root {
+  --color-primary: #1e90ff;
+  --color-bg: #000000;          /* page background */
+  --color-card-bg: #ffffff;     /* card background */
+  --color-text: #000000;        /* text color for card */
+  --color-input-bg: #f5f5f5;
+  --color-shadow: rgba(0,0,0,0.4);
+  --color-primary-hover: #0066cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.register-container {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.register-card {
+  background-color: var(--color-card-bg);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px var(--color-shadow);
+  width: 100%;
+  max-width: 900px;  /* long width for desktop */
+  text-align: center;
+}
+
+.register-title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.register-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields .field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.register-form input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--color-input-bg);
+  color: #000;
+  font-size: 1rem;
+}
+
+.register-form input::placeholder {
+  color: #888;
+}
+
+.register-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(30,144,255,0.5);
+}
+
+.btn {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn.upload-pic {
+  background-color: #555;
+  color: white;
+}
+
+.btn.upload-pic:hover {
+  background-color: #333;
+}
+
+.btn.register-btn {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn.register-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.login-text {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.login-text a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* ======================
+   Responsive for mobile
+====================== */
+@media (max-width: 600px) {
+  .register-card {
+    padding: 1.5rem 1.5rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  .register-title {
+    font-size: 1.6rem;
+  }
+
+  .register-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .register-form input {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+}

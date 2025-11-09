@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | YourFeed</title>
+  <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+<header class="navbar">
+  <div class="logo">YourFeed</div>
+
+  <!-- Navigation links -->
+  <nav class="nav-links">
+    <a href="/admin-dashboard.html" class="nav-item">Admin Dashboard</a>
+  </nav>
+
+  
+
+  <div class="user-section">
+    <div class="user-info">
+      <span class="user-name"></span>
+      <img src="#" alt="Profile Picture" class="profile-pic">
+    </div>
+
+    <div class="auth-buttons">
+      <button id="signin-btn" class="btn sign-in">Sign In</button>
+      <button id="logout-btn" class="btn sign-out">Sign Out</button>
+    </div>
+  </div>
+</header>
+
+
+
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Share Your Voice with the World</h1>
+    <p>YourFeed is where ideas come to life — read, write, and connect with people who inspire you.</p>
+    <div class="hero-buttons">
+      <a id="startwritin" href="post.html" class="startwritin btn primary">Start Writing</a>
+      <a href="#" class="btn secondary">Explore Blogs</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="Blogging Illustration">
+  </div>
+</section>
+
+
+
+
+
+
+<!-- User Feed Section -->
+<section class="feed-section">
+  <h2 class="section-title">Your Blogs</h2>
+  <p class="section-subtitle">Posts written by you, sorted by latest</p>
+
+  <div class="feed">
+    <!-- Blog 1 -->
+  
+    <article class="blog-card">
+      <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?auto=format&fit=crop&w=800&q=80" alt="React Hooks">
+      <div class="blog-content">
+        <h3>Understanding React Hooks</h3>
+        <p class="author">by John Doe • Nov 1, 2025</p>
+        <p class="excerpt">Hooks simplify how we manage state and side effects in React apps. This blog explains the basics and advanced patterns...</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </article>
+   
+  </div>
+</section>
+
+
+script type="module" src="scripts/app.js"></script>
+</body>
+</html>
