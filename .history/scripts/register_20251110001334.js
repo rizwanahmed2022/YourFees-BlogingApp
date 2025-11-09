@@ -8,6 +8,9 @@ import {
   addDoc,
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 import { db } from "./firebaseConfig.js";
+
+
+
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const email = document.querySelector("#email");
